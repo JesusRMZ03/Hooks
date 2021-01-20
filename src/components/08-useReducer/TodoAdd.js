@@ -3,6 +3,8 @@ import { useForm } from '../../hooks/useForm';
 
 export const TodoAdd = ({ handleAddTodo }) => {
 
+
+
     const [ { description }, handleInputChange, reset ] = useForm({
         description: ''
     });
@@ -19,10 +21,10 @@ export const TodoAdd = ({ handleAddTodo }) => {
             desc: description,
             done: false
         };
-        
+
         handleAddTodo( newTodo );
         reset();
-        
+
     }
 
 
@@ -33,7 +35,7 @@ export const TodoAdd = ({ handleAddTodo }) => {
 
             <form onSubmit={ handleSubmit }>
 
-                <input 
+                <input
                     type="text"
                     name="description"
                     className="form-control"
@@ -52,7 +54,7 @@ export const TodoAdd = ({ handleAddTodo }) => {
 
 
             </form>
-            
+
         </>
     )
 }
